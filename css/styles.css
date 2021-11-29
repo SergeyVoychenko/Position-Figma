@@ -1,0 +1,46 @@
+html {
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-size: 10px;
+}
+.wrapper {
+    min-height: 100%;
+    display: grid;
+    grid-template: minmax(100px, 100px) 1fr minmax(100px, 100px) / 1fr;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+}
+.header-menu > img {
+    width: 50px;
+}
+.header {
+    grid-area: header;
+    padding: 29px 160px;
+    background: #5c6f4e;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template: 1fr / 1fr;
+    position: relative;
+}
+.header-logo {
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 3.6rem;
+    line-height: 1.17;
+}
+.header-menu {
+    display: grid;
+    grid-auto-flow: column;
+    justify-items: end;
+    
+}
+.main {
+    height: 1000px;
+    grid-area: main;
+}
+.footer {
+    background: #5c6f4e;
+    grid-area: footer;
+}

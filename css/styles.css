@@ -2,45 +2,75 @@ html {
     font-family: Roboto, sans-serif;
     font-style: normal;
     font-size: 10px;
-}
-.wrapper {
-    min-height: 100%;
-    display: grid;
-    grid-template: minmax(100px, 100px) 1fr minmax(100px, 100px) / 1fr;
-    grid-template-areas: 
-    "header"
-    "main"
-    "footer";
-}
-.header-menu > img {
-    width: 50px;
+    height: 2000px;
 }
 .header {
-    grid-area: header;
-    padding: 29px 160px;
-    background: #5c6f4e;
-    display: grid;
-    grid-auto-flow: column;
-    grid-template: 1fr / 1fr;
-    position: relative;
+    background-color: #5c6f4e;
+    width: 100vw;
+    height: 100px;
+    position: fixed;
+}
+.header > div {
+    padding-left: 160px;
+    padding-right: 175px;
+    gap: 10px;
+    display: flex;
+    margin-top: 25px;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #5c6f4e;
 }
 .header-logo {
-    color: #FFFFFF;
     font-weight: 400;
     font-size: 3.6rem;
     line-height: 1.17;
+    color: white;
 }
-.header-menu {
-    display: grid;
-    grid-auto-flow: column;
-    justify-items: end;
-    
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+
 }
-.main {
-    height: 1000px;
-    grid-area: main;
+.nav:hover .dropdawn {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(40%);
+    z-index: 1;
 }
-.footer {
-    background: #5c6f4e;
-    grid-area: footer;
+.boll {
+    width: 50px;
+    z-index: 2;
+}
+.dropdawn {
+    transition: all 1s;
+    position: absolute;
+    top: -40px;
+    right: 1px;
+    width: 265px;
+    height: 207px;
+    visibility: hidden;
+    opacity: 0;
+    display: block;
+}
+.arrow {
+    width: 33.3px;
+    z-index: 2;
+}
+
+.dropdawn > li a {
+    transition: all 0.2s;
+    display: block;
+    color: #000000;
+    font-weight: normal;
+    font-size: 2.4rem;
+    line-height: 1.17;
+    padding: 10px 16px;
+    background-color: #7b89ba;
+}
+.dropdawn > li a:hover {
+    background-color: lightcoral;
+    color: white;
 }
